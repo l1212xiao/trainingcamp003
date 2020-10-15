@@ -1,5 +1,10 @@
 package class03;
 
+/*
+给定一个由字符串组成的数组String[] strs，给定一个正数K
+返回词频最大的前K个字符串，假设结果是唯一的
+ */
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map.Entry;

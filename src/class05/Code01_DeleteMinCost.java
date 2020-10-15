@@ -1,5 +1,11 @@
 package class05;
 
+/*
+给定两个字符串s1和s2，问s2最少删除多少字符可以成为s1的子串？
+比如 s1 = "abcde"，s2 = "axbc"
+返回1。s2删掉'x'就是s1的子串了。
+ */
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;

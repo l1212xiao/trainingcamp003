@@ -1,5 +1,11 @@
 package class07;
 
+/*
+一个数组中，如果两个数的最小公共因子大于1，则认为这两个数之间有通路
+返回数组中，有多少个独立的域
+ */
+
+
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -18,6 +24,7 @@ public class Code04_LargestComponentSizebyCommonFactor {
 		return set.maxSize();
 	}
 
+	//求最大公约数，初始保证m,n不为0
 	public static int gcd(int m, int n) {
 		return n == 0 ? m : gcd(n, m % n);
 	}

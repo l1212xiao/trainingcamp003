@@ -1,5 +1,10 @@
 package class03;
 
+/*
+请注意区分子串和子序列的不同，给定两个字符串str1和str2，
+求两个字符的最长公共子序列
+ */
+
 public class Code04_LCSubsequence {
 
 	public static int lcs(String s1, String s2) {

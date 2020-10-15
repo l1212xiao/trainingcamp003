@@ -1,5 +1,10 @@
 package class06;
 
+/*
+给定两个有序数组arr1和arr2，再给定一个正数K
+求两个数累加和最大的前K个，两个数必须分别来自arr1和arr2
+ */
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;

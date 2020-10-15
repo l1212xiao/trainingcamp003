@@ -1,5 +1,9 @@
 package class05;
 
+/*
+LRU内存替换算法的实现
+ */
+
 import java.util.HashMap;
 
 public class Code04_LeastRecentlyUsedCache {

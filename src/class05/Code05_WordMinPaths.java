@@ -1,5 +1,18 @@
 package class05;
 
+/*
+给定两个字符串，记为start和to，再给定一个字符串列表list，list中一定包含to list中没有重复字符串，所有的字符串都是小写的。
+规定: start每次只能改变一个字符，最终的目标是彻底变成to，但是每次变成的新字符串必须在list 中存在。
+请返回所有最短的变换路径。
+【举例】
+start="abc",end="cab",list={"cab","acc","cbc","ccc","cac","cbb","aab","abb"}
+转换路径的方法有很多种，但所有最短的转换路径如下:
+abc -> abb -> aab -> cab
+abc -> abb -> cbb -> cab
+abc -> cbc -> cac -> cab
+abc -> cbc -> cbb -> cab
+ */
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,6 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Set;
+import java.util.StringJoiner;
 
 public class Code05_WordMinPaths {
 
@@ -16,11 +30,11 @@ public class Code05_WordMinPaths {
 			List<String> list) {
 		list.add(start);
 		HashMap<String, ArrayList<String>> nexts = getNexts(list);
+
+		//求所有字符串到start的距离是多少，宽度优先遍历
 		HashMap<String, Integer> distances = getDistances(start, nexts);
-		
-		
-		
-		
+
+
 		LinkedList<String> pathList = new LinkedList<>();
 		List<List<String>> res = new ArrayList<>();
 		getShortestPaths(start, end, nexts, distances, pathList, res);
@@ -111,9 +125,11 @@ public class Code05_WordMinPaths {
 		}
 		List<List<String>> res = findMinPaths(start, end, list);
 		for (List<String> obj : res) {
-			for (String str : obj) {
-				System.out.print(str + " -> ");
-			}
+			// for (String str : obj) {
+			// 	System.out.print(str + " -> ");
+			// }
+			System.out.print(String.join(" -> ",obj));
+			// StringJoiner joiner = new StringJoiner(" -> ","[ "," }");
 			System.out.println();
 		}
 

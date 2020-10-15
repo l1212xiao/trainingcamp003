@@ -1,5 +1,12 @@
 package class03;
 
+/*
+背包容量为w
+一共有n袋零食, 第i袋零食体积为v[i]
+总体积不超过背包容量的情况下，
+一共有多少种零食放法？(总体积为0也算一种放法)。
+ */
+
 public class Code02_SnacksWays {
 
 	public static int ways1(int[] arr, int w) {
@@ -14,7 +21,7 @@ public class Code02_SnacksWays {
 	// rest : 0~w
 	public static int process(int[] arr, int index, int rest) {
 		if (rest < 0) { // 没有容量了
-			// -1 无方案的意思
+			// -1 无方案的意思 return 0 is ok hear
 			return -1;
 		}
 		// rest>=0,

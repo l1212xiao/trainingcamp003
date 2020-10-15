@@ -1,5 +1,9 @@
 package class08;
 
+/*
+给定一个字符串，如果可以在任意位置(或者只能后面)添加字符，最少添加几个能让字符串整体都是回文串。
+ */
+
 public class Code06_PalindromeMinAdd {
 
 	public static String getPalindrome1(String str) {

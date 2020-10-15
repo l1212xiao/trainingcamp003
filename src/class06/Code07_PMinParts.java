@@ -1,5 +1,9 @@
 package class06;
 
+/*
+字符串切分后都是回文的最小切分，求分割出的部分数
+ */
+
 public class Code07_PMinParts {
 
 	public static int minParts(String s) {

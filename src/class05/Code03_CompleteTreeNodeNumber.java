@@ -1,5 +1,11 @@
 package class05;
 
+/*
+求完全二叉树节点的个数
+
+要求时间复杂度低于O(N)
+ */
+
 public class Code03_CompleteTreeNodeNumber {
 
 	public static class Node {
@@ -26,6 +32,7 @@ public class Code03_CompleteTreeNodeNumber {
 		if (Level == h) {
 			return 1;
 		}
+		// 右树上的最左节点是否到最深层
 		if (mostLeftLevel(node.right, Level + 1) == h) {
 			return (1 << (h - Level)) + bs(node.right, Level + 1, h);
 		} else {

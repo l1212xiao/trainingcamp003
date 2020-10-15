@@ -1,5 +1,9 @@
 package class04;
 
+/*
+最长递增子序列问题的O(N*logN)的解法
+ */
+
 public class Code04_LIS {
 
 	public static int[] lis1(int[] arr) {
